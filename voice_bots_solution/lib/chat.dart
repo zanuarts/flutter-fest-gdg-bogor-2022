@@ -169,7 +169,7 @@ class _ChatState extends State<Chat> {
     }, onError: (e) {
       // print(e);
     }, onDone: () {
-      // print('done'); 
+      // print('done');
     });
   }
 
@@ -199,8 +199,8 @@ class _ChatState extends State<Chat> {
                     child: TextField(
                       controller: _textController,
                       onSubmitted: handleSubmitted,
-                      decoration:
-                          const InputDecoration.collapsed(hintText: "Send a message"),
+                      decoration: const InputDecoration.collapsed(
+                          hintText: "Send a message"),
                     ),
                   ),
                   Container(
@@ -229,7 +229,8 @@ class _ChatState extends State<Chat> {
 //------------------------------------------------------------------------------------
 class ChatMessage extends StatelessWidget {
   const ChatMessage(
-      {Key? key, required this.text, required this.name, required this.type}) : super(key: key);
+      {Key? key, required this.text, required this.name, required this.type})
+      : super(key: key);
 
   final String text;
   final String name;

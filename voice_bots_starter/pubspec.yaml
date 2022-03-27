@@ -32,7 +32,6 @@ dependencies:
   dialogflow_grpc:
   rxdart:
   sound_stream:
-  dialogflow_flutter:
 
 
   # The following adds the Cupertino Icons font to your application.

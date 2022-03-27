@@ -6,7 +6,6 @@ import 'package:sound_stream/sound_stream.dart';
 
 // TODO import Dialogflow
 
-
 class Chat extends StatefulWidget {
   const Chat({Key? key}) : super(key: key);
 
@@ -53,7 +52,6 @@ class _ChatState extends State<Chat> {
     await Future.wait([_recorder.initialize()]);
 
     // TODO Get a Service account
-    
   }
 
   void stopStream() async {
@@ -67,7 +65,6 @@ class _ChatState extends State<Chat> {
     _textController.clear();
 
     //TODO Dialogflow Code
-    
   }
 
   void handleStream() async {
@@ -80,17 +77,14 @@ class _ChatState extends State<Chat> {
     });
 
     // TODO Create SpeechContexts
-    
+
     // Create an audio InputConfig
     // See: https://cloud.google.com/dialogflow/es/docs/reference/rpc/google.cloud.dialogflow.v2#google.cloud.dialogflow.v2.InputAudioConfig
-    
 
     // TODO Make the streamingDetectIntent call, with the InputConfig and the audioStream
-    
 
     // TODO Get the transcript and detectedIntent and show on screen
     // Get the transcript and detectedIntent and show on screen
-    
   }
 
   // The chat interface
@@ -119,8 +113,8 @@ class _ChatState extends State<Chat> {
                     child: TextField(
                       controller: _textController,
                       onSubmitted: handleSubmitted,
-                      decoration:
-                          const InputDecoration.collapsed(hintText: "Send a message"),
+                      decoration: const InputDecoration.collapsed(
+                          hintText: "Send a message"),
                     ),
                   ),
                   Container(
@@ -149,7 +143,8 @@ class _ChatState extends State<Chat> {
 //------------------------------------------------------------------------------------
 class ChatMessage extends StatelessWidget {
   const ChatMessage(
-      {Key? key, required this.text, required this.name, required this.type}) : super(key: key);
+      {Key? key, required this.text, required this.name, required this.type})
+      : super(key: key);
 
   final String text;
   final String name;
