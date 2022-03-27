@@ -110,7 +110,7 @@ class _ChatState extends State<Chat> {
 
     _audioStream = BehaviorSubject<List<int>>();
     _audioStreamSubscription = _recorder.audioStream.listen((data) {
-      // print(data);
+      print(data);
       _audioStream.add(data);
     });
 
@@ -140,7 +140,7 @@ class _ChatState extends State<Chat> {
     responseStream.listen((data) {
       //print('----');
       setState(() {
-        // print(data);
+        print(data);
         String transcript = data.recognitionResult.transcript;
         String queryText = data.queryResult.queryText;
         String fulfillmentText = data.queryResult.fulfillmentText;
